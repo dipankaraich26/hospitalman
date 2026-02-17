@@ -1,0 +1,2 @@
+first_name,last_name,dob,gender,blood_group,phone,email,address,emergency_contact_name,emergency_contact_phone,insurance_provider,insurance_id
+John,Doe,1990-01-15,Male,O+,555-9999,john@example.com,123 Main St,Jane Doe,555-9998,BlueCross,BC-99999
