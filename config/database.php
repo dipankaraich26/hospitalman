@@ -4,6 +4,14 @@ define('DB_NAME', 'hospital_db');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
+// Dynamic base URL - works on any hosting (XAMPP, cPanel, etc.)
+if (!defined('BASE_URL')) {
+    $docRoot = realpath($_SERVER['DOCUMENT_ROOT']);
+    $baseDir = realpath(__DIR__ . '/..');
+    $relativePath = str_replace('\\', '/', str_replace($docRoot, '', $baseDir));
+    define('BASE_URL', '/' . trim($relativePath, '/'));
+}
+
 function getDBConnection() {
     static $pdo = null;
     if ($pdo === null) {

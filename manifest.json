@@ -2,20 +2,20 @@
     "name": "Hospital Management ERP",
     "short_name": "HospitalERP",
     "description": "Comprehensive hospital management system",
-    "start_url": "/hospitalman/modules/dashboard/index.php",
+    "start_url": "./modules/dashboard/index.php",
     "display": "standalone",
     "background_color": "#f1f5f9",
     "theme_color": "#1e293b",
     "orientation": "any",
     "icons": [
         {
-            "src": "/hospitalman/assets/icons/icon-192.png",
+            "src": "./assets/icons/icon-192.png",
             "sizes": "192x192",
             "type": "image/png",
             "purpose": "any maskable"
         },
         {
-            "src": "/hospitalman/assets/icons/icon-512.png",
+            "src": "./assets/icons/icon-512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"

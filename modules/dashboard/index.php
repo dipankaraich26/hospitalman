@@ -161,7 +161,7 @@ try {
         <div class="card border-info">
             <div class="card-header d-flex justify-content-between align-items-center">
                 <span><i class="bi bi-lightning"></i> Predictive Alerts</span>
-                <a href="/hospitalman/modules/dashboard/predictions.php" class="btn btn-sm btn-outline-info">View All Predictions</a>
+                <a href="<?= BASE_URL ?>/modules/dashboard/predictions.php" class="btn btn-sm btn-outline-info">View All Predictions</a>
             </div>
             <div class="card-body py-2">
                 <?php foreach (array_slice($predictiveAlerts, 0, 3) as $pa): ?>
@@ -173,7 +173,7 @@ try {
                 <?php endforeach; ?>
                 <?php if (count($predictiveAlerts) > 3): ?>
                 <div class="text-center mt-1">
-                    <a href="/hospitalman/modules/dashboard/predictions.php" class="text-muted small">+<?= count($predictiveAlerts) - 3 ?> more alerts</a>
+                    <a href="<?= BASE_URL ?>/modules/dashboard/predictions.php" class="text-muted small">+<?= count($predictiveAlerts) - 3 ?> more alerts</a>
                 </div>
                 <?php endif; ?>
             </div>
@@ -213,7 +213,7 @@ try {
             <div class="card-header d-flex justify-content-between">
                 <span><i class="bi bi-calendar3"></i> Upcoming Appointments</span>
                 <?php if (canAccess('clinical')): ?>
-                <a href="/hospitalman/modules/clinical/index.php" class="btn btn-sm btn-outline-primary">View All</a>
+                <a href="<?= BASE_URL ?>/modules/clinical/index.php" class="btn btn-sm btn-outline-primary">View All</a>
                 <?php endif; ?>
             </div>
             <div class="card-body p-0">
@@ -242,7 +242,7 @@ try {
             <div class="card-header d-flex justify-content-between">
                 <span><i class="bi bi-cash-stack"></i> Recent Payments</span>
                 <?php if (canAccess('billing')): ?>
-                <a href="/hospitalman/modules/billing/payments.php" class="btn btn-sm btn-outline-primary">View All</a>
+                <a href="<?= BASE_URL ?>/modules/billing/payments.php" class="btn btn-sm btn-outline-primary">View All</a>
                 <?php endif; ?>
             </div>
             <div class="card-body p-0">

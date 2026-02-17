@@ -74,7 +74,7 @@ $appointments = $pdo->query("
                 <?php foreach ($appointments as $a): ?>
                 <tr>
                     <td>
-                        <a href="/hospitalman/modules/patients/view.php?id=<?= $a['patient_id'] ?>">
+                        <a href="<?= BASE_URL ?>/modules/patients/view.php?id=<?= $a['patient_id'] ?>">
                             <?= sanitize($a['first_name'] . ' ' . $a['last_name']) ?>
                         </a>
                         <br><small class="text-muted"><?= sanitize($a['pid']) ?></small>

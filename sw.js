@@ -1,11 +1,11 @@
 const CACHE_NAME = 'hospital-erp-v1';
 const STATIC_ASSETS = [
-    '/hospitalman/assets/css/style.css',
-    '/hospitalman/assets/css/mobile.css',
-    '/hospitalman/assets/js/app.js',
-    '/hospitalman/offline.html',
-    '/hospitalman/assets/icons/icon-192.png',
-    '/hospitalman/assets/icons/icon-512.png'
+    './assets/css/style.css',
+    './assets/css/mobile.css',
+    './assets/js/app.js',
+    './offline.html',
+    './assets/icons/icon-192.png',
+    './assets/icons/icon-512.png'
 ];
 
 // Install: cache static assets
@@ -62,7 +62,7 @@ self.addEventListener('fetch', event => {
             })
             .catch(() => {
                 return caches.match(event.request).then(cached => {
-                    return cached || caches.match('/hospitalman/offline.html');
+                    return cached || caches.match('./offline.html');
                 });
             })
     );

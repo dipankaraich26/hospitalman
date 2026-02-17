@@ -12,7 +12,7 @@ function isLoggedIn(): bool {
 
 function requireLogin(): void {
     if (!isLoggedIn()) {
-        header('Location: /hospitalman/modules/auth/login.php');
+        header('Location: ' . BASE_URL . '/modules/auth/login.php');
         exit;
     }
 }
@@ -21,7 +21,7 @@ function requireRole(array $roles): void {
     requireLogin();
     if (!in_array($_SESSION['user_role'], $roles)) {
         $_SESSION['error'] = 'You do not have permission to access this page.';
-        header('Location: /hospitalman/modules/dashboard/index.php');
+        header('Location: ' . BASE_URL . '/modules/dashboard/index.php');
         exit;
     }
 }
@@ -30,7 +30,7 @@ function getCurrentUser(): ?array {
     if (!isLoggedIn()) return null;
     if (!isset($_SESSION['user_role'])) {
         session_destroy();
-        header('Location: /hospitalman/modules/auth/login.php');
+        header('Location: ' . BASE_URL . '/modules/auth/login.php');
         exit;
     }
     return [
@@ -63,7 +63,7 @@ function loginUser(string $username, string $password): bool {
 function logoutUser(): void {
     auditLog('logout', 'auth');
     session_destroy();
-    header('Location: /hospitalman/modules/auth/login.php');
+    header('Location: ' . BASE_URL . '/modules/auth/login.php');
     exit;
 }
 

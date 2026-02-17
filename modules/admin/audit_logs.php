@@ -47,7 +47,7 @@ $actions = ['create','read','update','delete','login','logout','export','import'
 
 <div class="page-header">
     <h4><i class="bi bi-journal-text"></i> Audit Logs</h4>
-    <a href="/hospitalman/modules/reports/export.php?type=audit_logs&from=<?= $filterFrom ?>&to=<?= $filterTo ?>" class="btn btn-outline-success no-print"><i class="bi bi-download"></i> Export CSV</a>
+    <a href="<?= BASE_URL ?>/modules/reports/export.php?type=audit_logs&from=<?= $filterFrom ?>&to=<?= $filterTo ?>" class="btn btn-outline-success no-print"><i class="bi bi-download"></i> Export CSV</a>
 </div>
 
 <!-- Filters -->

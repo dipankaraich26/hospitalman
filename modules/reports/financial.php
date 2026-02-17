@@ -191,7 +191,7 @@ $selfPayRev = $totalRevenue - $insRev;
             <tbody>
                 <?php foreach ($topInv as $inv): ?>
                 <tr>
-                    <td><a href="/hospitalman/modules/billing/view_invoice.php?id=<?= $inv['invoice_number'] ?>"><strong><?= sanitize($inv['invoice_number']) ?></strong></a></td>
+                    <td><a href="<?= BASE_URL ?>/modules/billing/view_invoice.php?id=<?= $inv['invoice_number'] ?>"><strong><?= sanitize($inv['invoice_number']) ?></strong></a></td>
                     <td><?= sanitize($inv['first_name'] . ' ' . $inv['last_name']) ?></td>
                     <td><?= formatDate($inv['invoice_date']) ?></td>
                     <td class="fw-bold"><?= formatCurrency($inv['total_amount']) ?></td>

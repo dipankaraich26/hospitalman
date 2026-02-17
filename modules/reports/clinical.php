@@ -338,7 +338,7 @@ $abnormalPats = $abnormalPatients->fetchAll();
                             <td class="text-danger"><?= $ap['fever_count'] ?></td>
                             <td class="text-warning"><?= $ap['low_spo2_count'] ?></td>
                             <td><?= $ap['abnormal_pulse_count'] ?></td>
-                            <td><a href="/hospitalman/modules/clinical/vital_trends.php?patient_id=<?= $ap['id'] ?>" class="btn btn-sm btn-outline-primary"><i class="bi bi-activity"></i> Trends</a></td>
+                            <td><a href="<?= BASE_URL ?>/modules/clinical/vital_trends.php?patient_id=<?= $ap['id'] ?>" class="btn btn-sm btn-outline-primary"><i class="bi bi-activity"></i> Trends</a></td>
                         </tr>
                         <?php endforeach; ?>
                         <?php if (empty($abnormalPats)): ?><tr><td colspan="7" class="text-muted text-center py-3">No abnormal readings</td></tr><?php endif; ?>

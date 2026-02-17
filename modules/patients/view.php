@@ -60,7 +60,7 @@ $age = $patient['dob'] ? date_diff(date_create($patient['dob']), date_create('to
 <div class="page-header">
     <h4><i class="bi bi-person-badge"></i> <?= sanitize($patient['first_name'] . ' ' . $patient['last_name']) ?></h4>
     <div>
-        <a href="/hospitalman/modules/clinical/vital_trends.php?patient_id=<?= $id ?>" class="btn btn-info"><i class="bi bi-activity"></i> Vital Trends</a>
+        <a href="<?= BASE_URL ?>/modules/clinical/vital_trends.php?patient_id=<?= $id ?>" class="btn btn-info"><i class="bi bi-activity"></i> Vital Trends</a>
         <a href="edit.php?id=<?= $id ?>" class="btn btn-primary"><i class="bi bi-pencil"></i> Edit</a>
         <a href="index.php" class="btn btn-outline-secondary"><i class="bi bi-arrow-left"></i> Back</a>
     </div>
@@ -160,7 +160,7 @@ $age = $patient['dob'] ? date_diff(date_create($patient['dob']), date_create('to
                         <tr><td colspan="6" class="text-center text-muted py-3">No invoices</td></tr>
                         <?php else: foreach ($bills as $b): ?>
                         <tr>
-                            <td><a href="/hospitalman/modules/billing/view_invoice.php?id=<?= $b['id'] ?>"><?= sanitize($b['invoice_number']) ?></a></td>
+                            <td><a href="<?= BASE_URL ?>/modules/billing/view_invoice.php?id=<?= $b['id'] ?>"><?= sanitize($b['invoice_number']) ?></a></td>
                             <td><?= formatDate($b['invoice_date']) ?></td>
                             <td><?= formatCurrency($b['total_amount']) ?></td>
                             <td class="text-success"><?= formatCurrency($b['paid_amount']) ?></td>

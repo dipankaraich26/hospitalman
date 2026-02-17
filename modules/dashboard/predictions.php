@@ -84,7 +84,7 @@ $alerts = generatePredictiveAlerts($pdo);
 
 <div class="page-header">
     <h4><i class="bi bi-graph-up-arrow"></i> Predictive Analytics</h4>
-    <a href="/hospitalman/modules/dashboard/index.php" class="btn btn-outline-secondary">
+    <a href="<?= BASE_URL ?>/modules/dashboard/index.php" class="btn btn-outline-secondary">
         <i class="bi bi-arrow-left"></i> Back to Dashboard
     </a>
 </div>

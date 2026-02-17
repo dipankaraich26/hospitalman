@@ -65,7 +65,7 @@ $users = $pdo->query("SELECT id, full_name, username FROM users WHERE status = '
 
 <div class="card mb-3">
     <div class="card-body">
-        <p class="text-muted mb-0">API Base URL: <code><?= 'http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') ?>/hospitalman/api/</code> | Auth: <code>Authorization: Bearer &lt;api_key&gt;</code></p>
+        <p class="text-muted mb-0">API Base URL: <code><?= 'http://' . ($_SERVER['HTTP_HOST'] ?? 'localhost') ?><?= BASE_URL ?>/api/</code> | Auth: <code>Authorization: Bearer &lt;api_key&gt;</code></p>
     </div>
 </div>
 

@@ -480,12 +480,12 @@ $(document).ready(function() {
 
 // Generate Compliance Report
 function generateComplianceReport() {
-    window.open('/hospitalman/modules/admin/compliance_report.php', '_blank');
+    window.open('<?= BASE_URL ?>/modules/admin/compliance_report.php', '_blank');
 }
 
 // Export Audit Log
 function exportAuditLog() {
-    window.location.href = '/hospitalman/modules/admin/export_audit.php?format=csv&days=30';
+    window.location.href = '<?= BASE_URL ?>/modules/admin/export_audit.php?format=csv&days=30';
 }
 </script>
 
