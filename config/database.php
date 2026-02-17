@@ -1,8 +1,8 @@
 <?php
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'hospital_db');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'erpsolution26_hospital_db');
+define('DB_USER', 'erpsolution26_erpsolution26');
+define('DB_PASS', 'tutushi@2026');
 
 // Dynamic base URL - works on any hosting (XAMPP, cPanel, etc.)
 if (!defined('BASE_URL')) {
