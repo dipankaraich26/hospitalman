@@ -7,12 +7,12 @@ define('DB_PASS', 'tutushi@2026');
 // Dynamic base URL - works on any hosting (XAMPP, cPanel, etc.)
 if (!defined('BASE_URL')) {
     $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
-    // Find "config/" or "modules/" or "includes/" or "api/" in the path to determine project root
-    if (preg_match('#^(.*?)/(config|modules|includes|api|assets)/#', $scriptName, $m)) {
+    if (preg_match('#^(/.+?)/(config|modules|includes|api|assets)/#', $scriptName, $m)) {
+        // Project is in a subfolder (e.g., /hospitalman)
         define('BASE_URL', $m[1]);
     } else {
-        // Script is at the project root (e.g., index.php)
-        define('BASE_URL', rtrim(str_replace('\\', '/', dirname($scriptName)), '/'));
+        // Project is at the document root
+        define('BASE_URL', '');
     }
 }
 
