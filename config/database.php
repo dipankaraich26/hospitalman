@@ -6,10 +6,14 @@ define('DB_PASS', '');
 
 // Dynamic base URL - works on any hosting (XAMPP, cPanel, etc.)
 if (!defined('BASE_URL')) {
-    $docRoot = realpath($_SERVER['DOCUMENT_ROOT']);
-    $baseDir = realpath(__DIR__ . '/..');
-    $relativePath = str_replace('\\', '/', str_replace($docRoot, '', $baseDir));
-    define('BASE_URL', '/' . trim($relativePath, '/'));
+    $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME']);
+    // Find "config/" or "modules/" or "includes/" or "api/" in the path to determine project root
+    if (preg_match('#^(.*?)/(config|modules|includes|api|assets)/#', $scriptName, $m)) {
+        define('BASE_URL', $m[1]);
+    } else {
+        // Script is at the project root (e.g., index.php)
+        define('BASE_URL', rtrim(str_replace('\\', '/', dirname($scriptName)), '/'));
+    }
 }
 
 function getDBConnection() {
